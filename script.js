@@ -94,10 +94,10 @@ let showLoanDetails=(PA, MonthlyPaymentEMI, payableAmount, totalInterest)=>{
     // here Math.trunc() 📗🔖 reomove the decimal
     // here toLocalString() show no with , comman so that easy readbale \
 
-      loanAmountsShow.innerHTML = Math.trunc(PA).toLocaleString();
-      payableAmountsShow.innerHTML = Math.trunc(payableAmount).toLocaleString();
-      toatalInterestAmountsShow.innerHTML = Math.trunc(totalInterest).toLocaleString();
-      monthlyPaymentShow.innerHTML = Math.trunc(MonthlyPaymentEMI).toLocaleString();
+      loanAmountsShow.innerHTML = `₹${Math.trunc(PA).toLocaleString()}`;
+      payableAmountsShow.innerHTML = `₹${Math.trunc(payableAmount).toLocaleString()}`;
+      toatalInterestAmountsShow.innerHTML = `₹${Math.trunc(totalInterest).toLocaleString()}`;
+      monthlyPaymentShow.innerHTML = `₹${Math.trunc(MonthlyPaymentEMI).toLocaleString()}`;
 
 
     // loanAmountsShow.innerHTML = PA.toLocaleString('en-US', { style: 'currency', currency: 'INR' });
