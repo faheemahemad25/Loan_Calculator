@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Project-15_LoanCalculator/style.css">
+    <title>Loan Calculator</title>
+</head>
+<body>
+     <main>
+        <!-- section 1 -->
+         <div class="calculator-content padding">
+            <h2 id="loanCalculator-heading">Loan Calculator</h2>
+             <form action="" id="calc-form">
+                <!-- form input item 1 -->
+                <div class="input-item">
+                    <div class="input-name">
+                        <span class="input-numbering">1</span>
+                        <label>Principal Amount</label>
+                    </div>
+                    <div class="input-element">
+                        <span class="input-hints-desc">(in Inr)</span>
+                        <input type="number" name=""  id="princpl-Amt">  <!-- NOTE:📗🔖📗🔖  input number element give/return string instead of number. but it give number look string-->
+                        <!-- <input type="number" name=""  id="princpl-Amt" step="1">📗🔖by default input element with number  only-only take integer so dont need to write attibute-->
+                    </div>
+                </div>
+                <!-- form input item1 end -->
+
+                <!-- form input item 2 -->
+                <div class="input-item">
+                    <div class="input-name">
+                        <span class="input-numbering">2</span>
+                        <label>Interest Rate</label>
+                    </div>
+                    <div class="input-element">
+                        <span class="input-hints-desc">(in Percentage)</span>
+                        <input type="number" name=""  id="intrst-Rate" step="0.01"> <!-- NOTE:📗🔖📗🔖  input number element give/return string instead of number. but it give number look string--><!--📗🔖 step="any" or step="0.01" now this input filed can take decimal number also upto 2 decimal point-->
+                    </div>
+                </div>
+                <!-- form input item2 end -->
+
+                <!-- form input item 3 -->
+                <div class="input-item">
+                    <div class="input-name">
+                        <span class="input-numbering">3</span>
+                        <label>Number of Months</label>
+                    </div>
+                    <div class="input-element">
+                        <span class="input-hints-desc">(in Months)</span>
+                        <input type="number" name=""  id="noOf-Mnths">
+                    </div>
+                </div>
+                <!-- form input item3 end -->
+
+                 <div class="btns">
+                    <input type="submit" id="submit-btn" value="Calculate">  <!-- NOTE:📗🔖📗🔖  input number element give/return string instead of number. but it give number look string--><!--in input element 📗🔖value="" attribute is used to show text-->
+                    <input type="button" id="clear-btn" value="Clear">   <!-- alternative of button element bcz type="button"-->
+                 </div>
+             </form>
+         </div>
+
+         <!-- section 2 -->
+          <div class="calculator-result padding">
+            <h2 id="loanDetails-heading">Loan Details</h2>
+            <div class="loan-details">
+                <div class="box box1">
+                    <p>EMI (Monthly Pay)</p>
+                    <p id="monthlyPaymentEMI"> &mdash;</p>
+                </div>
+                <div class="box box2">
+                    <p>Payable Amount</p>
+                    <p id="payableAmounts"> &mdash; </p>
+                </div>
+                <div class="box box3">
+                    <p>Interest Amount</p>
+                    <p id="toatalInterestAmounts"> &mdash; </p>
+                </div>
+                <div class="box box4">
+                    <p>Principal Amount</p>
+                    <p id="loanAmounts"> &mdash; </p>
+                </div>
+            </div>
+         </div>
+     </main>
+
+
+    <script src="/Project-15_LoanCalculator/script.js"></script>
+</body>
+</html>

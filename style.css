@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+:root{
+    --dark-greyBlue:#9CB4C3;
+    --dark-slate:#3e4c56;
+    --light-greyBlue:#f1f5f8;
+    --inputBorder-color:#c4ccd3;
+    --light-grey:#909090;
+    --box-color:#82e2c8;
+    --btn-color:#d96983;
+
+   
+}
+
+/* ------- utility class ------------ */
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+.align-center{
+    display: flex;
+    align-items: center;
+}
+.padding{
+    padding: 1rem 3rem;
+}
+
+/* ------- utility class end ------------ */
+
+
+body{ 
+    height: 100vh;
+    /* border: 2px solid red; */
+     background-color: var(--dark-greyBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+/* main{
+    width: 100vw; 
+    height: 100vh; 
+    background-color: var(--dark-greyBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.calculator-content, .calculator-result{
+    background-color: var(--light-greyBlue);
+    box-shadow: 1px 1px 5px 0px rgb(0, 0, 0.15);
+    width: 70vw;
+    margin-bottom: 0.4rem;
+}
+
+/* ======================================================================================
+                                    section 1  loan-content
+ ===================================================================================== */
+ main{
+    height: auto;
+ }
+ .calculator-content{
+    height: 40vh;
+    /* overflow: auto; */
+    /* border: 2px solid red; */
+
+}
+#loanCalculator-heading{
+    color: var(--dark-slate);
+    text-align: center;
+    border-bottom: 2px solid var(--dark-greyBlue);
+    margin-bottom: 0.8rem;
+}
+.input-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0.4rem;
+    /* border: 2px solid red; */
+    
+}
+
+.input-numbering{
+    background-color: var(--btn-color);
+    color: white;
+    font-weight: 500;
+    border-radius: 50%;
+    padding: 0.4rem 0.6rem;
+    /* font-size: 1rem; */
+    
+}
+.input-hints-desc{
+    color: var(--light-grey);
+}
+input{
+    height: 2.25rem;   /*📗🔖 we can give direct height or padding to increase input height*/
+    outline: none;
+    border: 2px solid var(--inputBorder-color);
+    border-radius: 5px;
+    padding: 0rem 0.5rem;
+}
+input[type="number"]{
+    color: var(--dark-slate);
+    font-weight: 500;
+    font-size: 1rem;
+}
+.btns{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* border: 2px solid red; */
+}
+
+#submit-btn, #clear-btn{
+    /* display: inline-block; 🔖📗It doesnt work bcz if element is inline*/ 
+    width: fit-content;
+    background-color: var(--box-color);
+    color: var(--dark-slate);
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    /* width: 15%; */
+}
+
+#submit-btn:hover, 
+#clear-btn:hover{
+    box-shadow: 2px 2px 15px 2px #8adfc8;
+}
+#submit-btn:active, 
+#clear-btn:active{
+    transform: scale(0.9);
+}
+
+/* ======================================================================================
+                                    section 2  loan-details
+ ===================================================================================== */
+
+ .calculator-result{
+    height: 35vh;
+    /* border: 2px solid red; */
+
+}
+
+#loanDetails-heading{
+    color: var(--dark-slate);
+    border-bottom: 2px solid var(--dark-greyBlue);
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+ .loan-details{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+ }
+
+ .box{
+    color: var(--dark-slate);
+    text-align: center;
+    padding-block: 0.7rem;
+    height: 18vh;
+    font-size:1.2rem; /*🔖 by default p element size 1rem */
+    font-weight: 500;  /*🔖  by default p element weight 400*/
+    /* border-left: 5px solid var(--dark-greyBlue); */
+    /* background: color-mix(in srgb, var(--dark-greyBlue), white 60%); */
+ }
+ .box1{
+    border-top: 5px solid blue;
+    background: color-mix(in srgb, blue, white 80%);
+ }
+
+ .box2{
+    border-top: 5px solid rgb(173, 8, 173);
+    background: color-mix(in srgb, rgb(226, 75, 226), white 80%);
+ }
+ .box3{
+    border-top: 5px solid green;
+    background: color-mix(in srgb, green, white 80%);
+ }
+ .box4{
+    border-top: 5px solid rgb(211, 211, 40);
+    background: color-mix(in srgb, rgb(211, 211, 40), white 80%);
+ }
+
+
+/* ======================================================================================
+                                    media Query
+ ===================================================================================== */
+
+
+@media screen and (max-width:450px) {
+   
+    body{
+         height: auto;  /* we have set starting*/
+
+         
+    }
+   /* ----- section 1 ----------- */
+   
+   .calculator-content{
+       width: 90vw;
+       height: auto;
+       padding: 1rem;
+       margin-top: 1rem;  /* spacing from body*/
+   }
+
+   .input-item{
+       /* border: 2px solid rgb(233, 230, 230); */
+       display: flex;
+       flex-direction: column;
+       align-items: start;  /*  it bcz starting we set justify-content: space-between this line remove*/
+       gap: 0.7rem;
+       padding-block: 0.5rem;
+       margin-bottom: 1rem;
+
+   }
+   .input-element{
+    /* border: 2px solid red; */
+    /*📗🔖📗🔖📗🔖📗🔖 input element if screen size change then it also shrink and strech for acheive it use width 100% and grid 📗🔖📗🔖 */
+     width: 100%;
+     display: grid;
+     grid-template-columns: 40% 60%;
+     align-items: center;
+     
+   }
+
+   .btns{
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+   }
+
+
+/*  ----- section 2 -----------  */
+
+   .calculator-result{
+       width: 90vw;
+       height: auto;
+       padding: 8px; 
+   }
+
+   .loan-details{
+       /* display: flex;
+       flex-direction: column; */
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+   }
+
+}
+
